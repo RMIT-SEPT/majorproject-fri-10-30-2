@@ -9,4 +9,10 @@ public interface EmployeeRepository extends CrudRepository<Employee, Long> {
     Iterable<Employee> findAllById(Iterable<Long> iterable);
 
     Iterable<Employee> findAllByName(String name);
+    
+    Iterable<Employee> findByEmail(String email);
+    
+    Iterable<Employee> findByGender(String gender);
+
+	Iterable<Employee> findByPhone(String phone);
 }

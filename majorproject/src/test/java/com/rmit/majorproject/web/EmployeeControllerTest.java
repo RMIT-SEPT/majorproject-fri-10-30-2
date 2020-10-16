@@ -1,36 +1,23 @@
 package com.rmit.majorproject.web;
 
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.rmit.majorproject.BackEnd.Repositories.EmployeeRepository;
 import com.rmit.majorproject.BackEnd.model.Employee;
-import com.rmit.majorproject.BackEnd.web.EmployeeController;
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
 import java.util.Calendar;
@@ -38,7 +25,6 @@ import java.util.Date;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -68,7 +54,7 @@ public class EmployeeControllerTest {
         employee.setTFN("123456789");
         employee.setEmail("bob@test.com");
         employee.setGender("Male");
-        employee.setPhoneNumber("0499988844");
+        employee.setPhone("0499988844");
         employee.setSuperNumber("044815002000020");
 
         String employee_json = OBJECT_MAPPER.writeValueAsString(employee);
@@ -89,7 +75,7 @@ public class EmployeeControllerTest {
         employee.setTFN("123456789");
         employee.setEmail("bob@test.com");
         employee.setGender("Male");
-        employee.setPhoneNumber("0499988844");
+        employee.setPhone("0499988844");
         employee.setSuperNumber("044815002000020");
 
         when(this.employeeRepository.findById(1L)).thenReturn(Optional.of(employee));
@@ -108,7 +94,7 @@ public class EmployeeControllerTest {
         employee.setTFN("123456789");
         employee.setEmail("bob@test.com");
         employee.setGender("Male");
-        employee.setPhoneNumber("0499988844");
+        employee.setPhone("0499988844");
         employee.setSuperNumber("044815002000020");
 
         when(this.employeeRepository.findById(1L)).thenReturn(Optional.of(employee));

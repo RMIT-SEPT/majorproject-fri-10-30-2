@@ -103,7 +103,7 @@ public class Employee {
         return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhone(String phoneNumber) {
         this.phone = phoneNumber;
     }
 

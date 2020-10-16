@@ -1,10 +1,8 @@
 package com.rmit.majorproject.BackEnd.services;
 
 import com.rmit.majorproject.BackEnd.Repositories.EmployeeRepository;
-import com.rmit.majorproject.BackEnd.model.Booking;
 import com.rmit.majorproject.BackEnd.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
