@@ -17,6 +17,5 @@ public interface EmployeeRepository extends CrudRepository<Employee, Long> {
     
     Iterable<Employee> findByGender(String gender);
 
-	Iterable<Employee> findByPhoneNumber(String dateOfBirth);
-    
+	  Iterable<Employee> findByPhone(String phone);
 }

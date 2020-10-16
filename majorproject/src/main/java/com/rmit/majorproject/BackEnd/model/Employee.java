@@ -105,9 +105,8 @@ public class Employee {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+    public void setPhone(String phoneNumber) {
+        this.phone = phoneNumber;
 
     public String getTFN() {
         return TFN;

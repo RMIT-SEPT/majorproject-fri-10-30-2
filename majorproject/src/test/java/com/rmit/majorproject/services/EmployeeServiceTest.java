@@ -1,17 +1,12 @@
 package com.rmit.majorproject.services;
 
-import com.rmit.majorproject.BackEnd.Repositories.BookingRepository;
 import com.rmit.majorproject.BackEnd.model.Employee;
-import com.rmit.majorproject.BackEnd.services.BookingService;
 import com.rmit.majorproject.BackEnd.services.EmployeeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -43,7 +38,7 @@ public class EmployeeServiceTest {
         bob.setTFN("123456789");
         bob.setEmail("bob@test.com");
         bob.setGender("Male");
-        bob.setPhoneNumber("0499988844");
+        bob.setPhone("0499988844");
         bob.setSuperNumber("044815002000020");
         long id = (long)entityManager.persistAndGetId(bob);
         entityManager.flush();
@@ -63,7 +58,7 @@ public class EmployeeServiceTest {
         bob.setTFN("123456789");
         bob.setEmail("bob@test.com");
         bob.setGender("Male");
-        bob.setPhoneNumber("0499988844");
+        bob.setPhone("0499988844");
         bob.setSuperNumber("044815002000020");
         entityManager.persistAndFlush(bob);
 
@@ -86,7 +81,7 @@ public class EmployeeServiceTest {
         bob.setTFN("123456789");
         bob.setEmail("bob@test.com");
         bob.setGender("Male");
-        bob.setPhoneNumber("0499988844");
+        bob.setPhone("0499988844");
         bob.setSuperNumber("044815002000020");
 
         long bob_id = (long)entityManager.persistAndGetId(bob);
@@ -107,7 +102,7 @@ public class EmployeeServiceTest {
         bob.setTFN("123456789");
         bob.setEmail("bob@test.com");
         bob.setGender("Male");
-        bob.setPhoneNumber("0499988844");
+        bob.setPhone("0499988844");
         bob.setSuperNumber("044815002000020");
 
         long bob_id = (long)entityManager.persistAndGetId(bob);
@@ -118,7 +113,7 @@ public class EmployeeServiceTest {
         steve.setTFN("123456789");
         steve.setEmail("bob@test.com");
         steve.setGender("Male");
-        steve.setPhoneNumber("0499988844");
+        steve.setPhone("0499988844");
         steve.setSuperNumber("044815002000020");
         long steve_id = (long)entityManager.persistAndGetId(steve);
 
@@ -143,7 +138,7 @@ public class EmployeeServiceTest {
         bob.setTFN("123456789");
         bob.setEmail("bob@test.com");
         bob.setGender("Male");
-        bob.setPhoneNumber("0499988844");
+        bob.setPhone("0499988844");
         bob.setSuperNumber("044815002000020");
 
         entityManager.persistAndFlush(bob);
